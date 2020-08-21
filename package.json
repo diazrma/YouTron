@@ -1,0 +1,42 @@
+{
+  "name": "youtron",
+  "version": "1.0.0",
+  "description": "YouTron, baixe seus vídeos favoritos do youtube.",
+  "main": "main.js",
+  "build": {
+    "appId": "youtron",
+    "asar": true,
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "logo.ico"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/diazrma/YouTron.git",
+  "keywords": [
+    "Youtube",
+    "Vídeo",
+    "Flv",
+    "Download"
+  ],
+  "author": "Rodrigo Cardoso da Luz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diazrma/YouTron/issues"
+  },
+  "homepage": "https://github.com/diazrma/YouTron#readme",
+  "devDependencies": {
+    "electron": "^9.2.1",
+    "electron-builder": "^22.8.0"
+  },
+  "dependencies": {
+    "ytdl-core": "^3.2.2"
+  }
+}

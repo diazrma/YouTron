@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>YouTron</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    </head>
+    <style>
+        body,
+        html {
+            background: #000000;
+            font-family:verdana;
+              overflow: hidden;
+        }
+    </style>
+    <body>
+        <nav class="navbar navbar-light bg-danger justify-content-between">
+            <a class="navbar-brand">YouTron <i class="material-icons">library_music</i> </a>
+            <form class="form-inline">
+
+                <a  id="min" class="text-white" href="" class="my-2  my-sm-0">
+                    <i class="material-icons">minimize</i>
+                </a>
+                <a id="max" class="text-white"  href="" class=" my-2 mx-2 my-sm-0">
+                    <i class="material-icons">fullscreen</i>
+                </a>
+                <a id="close" class="text-white"  href="" class=" my-2 my-sm-0">
+                    <i class="material-icons">close</i>
+                </a>
+            </form>
+        </nav>
+    
+    
+    
+        <div class="d-flex vh-100">
+            <div class="d-flex w-100 justify-content-center align-self-center">
+                <div class="container">
+                    <center><h5 class="text-white" >Baixe seu vídeo favorito sem anuncios chatos!</h5></center>
+                    <br/>
+                    <div class="input-group mb-3">
+                        <input type="text" id="url" class="form-control" placeholder="Insira o link aqui!">
+                        <div class="input-group-append">
+                            <a class="btn btn-outline-danger text-white" id="download">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+<script>
+    var path = require('path')
+
+    require(path.resolve(__dirname, 'renderer.js'));
+</script>

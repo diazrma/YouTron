@@ -1,5 +1,5 @@
 const { downloadVideo } = require('./download');
-exports.ipcControl = (BrowserWindow, window, ipc, dialog) => {
+exports.ipcControl = (BrowserWindow, window, ipc, dialog,shell) => {
     ipc.on('min', (event, args) => {
         let min = args;
         if (min) {
@@ -15,9 +15,9 @@ exports.ipcControl = (BrowserWindow, window, ipc, dialog) => {
         let max = args;
         if (max) {
 
-        
 
-            var window =BrowserWindow.getFocusedWindow();
+
+            var window = BrowserWindow.getFocusedWindow();
             window.isMaximized() ? window.unmaximize() : window.maximize();
 
         }
@@ -71,5 +71,12 @@ exports.ipcControl = (BrowserWindow, window, ipc, dialog) => {
 
     });
 
+    ipc.on('openFolder', (event, args) => {
+        let openFolder = args;
+        if (openFolder) {
+            console.log('aqui abre a pasta')
+        }
 
+
+    })
 }

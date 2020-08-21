@@ -1,4 +1,4 @@
-const { app, BrowserWindow, globalShortcut, window, dialog} = require('electron');
+const { app, BrowserWindow, globalShortcut, window, dialog,shell} = require('electron');
 const ipc = require('electron').ipcMain
 const {ipcControl} =require('./ipc');
 
@@ -26,7 +26,7 @@ function createWindow() {
       });
     
     
-    ipcControl(BrowserWindow,window,ipc,dialog);
+    ipcControl(BrowserWindow,window,ipc,dialog,shell);
 }
 
 

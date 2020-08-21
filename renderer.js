@@ -32,3 +32,14 @@ download.addEventListener('click', () => {
     ipc.sendSync('download', url);
 
 });
+
+
+
+
+openFolder = document.getElementById('openFolder');
+
+openFolder.addEventListener('click', () => {
+   
+    ipc.sendSync('openFolder', true);
+
+});
